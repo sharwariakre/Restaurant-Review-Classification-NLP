@@ -19,10 +19,8 @@ for i in range (0,1000):                      #1000 rows
     all_stopwords = stopwords.words('english') #collecting all the english stopwords
     all_stopwords.remove('not')
     all_stopwords.remove('no')
-    #all_stopwords.remove('after')
     review = [lm.lemmatize(word) for word in review if not word in set (all_stopwords)]
     review = [ps.stem(word) for word in review if not word in set (all_stopwords)]   #stemming applied on word in review if word not present in all_stopwords
-    #to convert lost of words into sentence, use join function
     review = ' '.join(review)
     corpus.append(review)
 print()

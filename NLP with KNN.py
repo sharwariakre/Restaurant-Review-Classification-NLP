@@ -9,7 +9,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 from nltk.corpus import stopwords             #words which do not have any influence on learning of model(here, reviews)
 from nltk.stem import WordNetLemmatizer    #to convert derived word into base form
-#from nltk.stem.porter import PorterStemmer
+
 corpus=[]                                     #to collect refined reviews
 for i in range (0,1000):                      #1000 rows
     review = re.sub('[^a-zA-Z]',' ',df['Review'][i])    #what(all the characters which are not alphabets),with what/by what(space), from where(each row of Review column)
